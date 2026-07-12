@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduKit | The Student's Convenience Store</title>
+    <meta name="description" content="EduKit Kharagpur: Your one-stop shop for Xerox, Color Printing, Online Form Filling, and Stationery. Expert academic services and supplies in Kharagpur.">
+    <meta name="keywords" content="EduKit, Xerox, Printing Services, Online Form Filling, Stationery Shop, Kharagpur, Student Services, Digital Services">
+    <meta name="author" content="EduKit">
+
+    <meta property="og:type" content="business.business">
+    <meta property="og:url" content="https://edukitkgp.store/">
+    <meta property="og:title" content="EduKit | The Student's Convenience Store">
+    <meta property="og:description" content="Need Xerox, Prints, or Form Filling? EduKit is your one-stop destination for digital services and stationery essentials in Heriasole More, Kharagpur(L).">
+    <meta property="og:image" content="https://edukitkgp.store/Edukit_social_preview.jpg">
+    <meta property="og:site_name" content="EduKit">
+
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://edukitkgp.store/">
+    <meta property="twitter:title" content="EduKit | The Student's Convenience Store">
+    <meta property="twitter:description" content="Need Xerox, Prints, or Form Filling? EduKit is your one-stop destination for digital services and stationery essentials in Heriasole More, Kharagpur(L).">
+    <meta property="twitter:image" content="https://edukitkgp.store/Edukit_social_preview.jpg">
+    
+    <link rel="icon" type="image/webp" href="Edukit_favicon.webp">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap');
+
+        body {
+            font-family: 'Nunito', sans-serif;
+        }
+
+        /* Smooth Scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Custom Color Utilities to match Logo */
+        .text-brand-blue { color: #1e40af; }
+        .bg-brand-blue { background-color: #1e40af; }
+        .text-brand-orange { color: #f97316; }
+        .bg-brand-orange { background-color: #f97316; }
+
+        /* Animation for Hero Elements */
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+        .animate-float { animation: float 6s ease-in-out infinite; }
+        
+        /* Pulse animation for the floating WA button */
+        @keyframes pulse-green {
+            0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+            70% { box-shadow: 0 0 0 10px rgba(37, 211, 102, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+        }
+        .wa-float {
+            animation: pulse-green 2s infinite;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800">
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm sticky top-0 z-50 border-b border-slate-100">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <!-- Logo -->
+            <a href="#" class="flex items-center hover:opacity-90 transition">
+                <img src="Edukit_Logo.webp" onerror="this.src='https://placehold.co/200x80?text=EduKit+Logo'" alt="Edukit Logo" class="h-14 md:h-16 object-contain">
+            </a>
+
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex space-x-8 font-bold text-slate-600 items-center">
+                <a href="#services" class="hover:text-brand-blue transition">Services</a>
+                <a href="#products" class="hover:text-brand-orange transition">Stationery</a>
+                <a href="#about" class="hover:text-brand-blue transition">About</a>
+                <a href="#contact" class="px-5 py-2 bg-brand-orange text-white rounded-full hover:bg-orange-600 transition shadow-md">Contact Us</a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" class="md:hidden text-slate-600 focus:outline-none p-2">
+                <i class="fa-solid fa-bars text-2xl"></i>
+            </button>
+        </div>
+        
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t px-6 py-4 space-y-3 shadow-lg">
+            <a href="#services" class="block text-slate-600 font-semibold py-2">Services</a>
+            <a href="#products" class="block text-slate-600 font-semibold py-2">Stationery</a>
+            <a href="#about" class="block text-slate-600 font-semibold py-2">About</a>
+            <a href="#contact" class="block text-brand-orange font-bold py-2">Contact Us</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="bg-gradient-to-br from-blue-50 via-white to-orange-50 py-16 lg:py-28 overflow-hidden relative">
+        <div class="container mx-auto px-6 flex flex-col-reverse md:flex-row items-center">
+            <!-- Text Content -->
+            <div class="md:w-1/2 text-center md:text-left z-10">
+                <span class="text-brand-orange font-bold tracking-wider text-sm uppercase mb-2 block">Welcome to Edukit</span>
+                <h1 class="text-4xl lg:text-6xl font-extrabold leading-tight text-slate-800 mb-6">
+                    The Student’s <br>
+                    <span class="text-brand-blue">Convenience</span> <span class="text-brand-orange">Store</span>
+                </h1>
+                <p class="text-lg text-slate-600 mb-8 max-w-lg mx-auto md:mx-0 leading-relaxed">
+                    From high-quality Xerox and printing to online form filling and daily stationery essentials. We are your one-stop shop for academic success.
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center md:justify-start gap-4">
+                    <a href="#contact" class="bg-brand-blue text-white px-8 py-3 rounded-lg font-bold shadow-lg hover:bg-blue-800 transition transform hover:-translate-y-1">
+                        Visit Shop
+                    </a>
+                    <a href="#services" class="bg-white text-brand-blue border-2 border-brand-blue px-8 py-3 rounded-lg font-bold hover:bg-blue-50 transition">
+                        View Services
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Hero Graphics -->
+            <div class="md:w-1/2 mb-12 md:mb-0 flex justify-center relative z-10">
+                <!-- CSS Composition for "Edukit Hub" -->
+                <div class="relative w-80 h-80 animate-float">
+                    <!-- Background Circles -->
+                    <div class="absolute inset-0 bg-blue-100 rounded-full opacity-50 blur-2xl transform scale-110"></div>
+                    
+                    <!-- Main Icon Stack -->
+                    <div class="relative bg-white w-full h-full rounded-3xl shadow-2xl border-4 border-white flex flex-col items-center justify-center p-6 overflow-hidden">
+                        
+                        <!-- Decorative top bar -->
+                        <div class="absolute top-0 w-full h-2 bg-brand-orange"></div>
+                        <div class="absolute top-2 w-full h-2 bg-brand-blue"></div>
+
+                        <div class="grid grid-cols-2 gap-4 w-full h-full mt-4">
+                            <div class="bg-slate-50 rounded-xl flex flex-col items-center justify-center p-4 border border-slate-100">
+                                <i class="fa-solid fa-print text-4xl text-brand-blue mb-2"></i>
+                                <span class="text-xs font-bold text-slate-500">PRINT</span>
+                            </div>
+                            <div class="bg-slate-50 rounded-xl flex flex-col items-center justify-center p-4 border border-slate-100">
+                                <i class="fa-solid fa-laptop text-4xl text-brand-orange mb-2"></i>
+                                <span class="text-xs font-bold text-slate-500">FORMS</span>
+                            </div>
+                            <div class="bg-slate-50 rounded-xl flex flex-col items-center justify-center p-4 border border-slate-100">
+                                <i class="fa-solid fa-pen-ruler text-4xl text-yellow-500 mb-2"></i>
+                                <span class="text-xs font-bold text-slate-500">TOOLS</span>
+                            </div>
+                            <div class="bg-slate-50 rounded-xl flex flex-col items-center justify-center p-4 border border-slate-100">
+                                <i class="fa-solid fa-copy text-4xl text-slate-600 mb-2"></i>
+                                <span class="text-xs font-bold text-slate-500">XEROX</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Floating Badge -->
+                    <div class="absolute -bottom-5 -right-5 bg-brand-orange text-white px-6 py-3 rounded-full shadow-lg font-bold border-4 border-white">
+                        <i class="fa-solid fa-bolt mr-2"></i> Fast Service
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+   <!-- Services Section -->
+    <section id="services" class="scroll-mt-16 py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-slate-800 mb-4">Our Core Services</h2>
+                <div class="w-24 h-1.5 bg-brand-orange mx-auto rounded-full"></div>
+                <p class="mt-4 text-slate-600 max-w-2xl mx-auto">We provide professional digital services to help you with your studies, exams, and office work.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Service 1: Xerox & Printing -->
+                <div class="bg-slate-50 p-8 rounded-2xl shadow-sm hover:shadow-xl transition border-t-4 border-brand-blue group">
+                    <!-- CHANGED BELOW: used bg-[#1e40af] instead of bg-brand-blue for group-hover -->
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6 text-brand-blue group-hover:bg-[#1e40af] group-hover:text-white transition">
+                        <i class="fa-solid fa-print text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-slate-800">Xerox & Printing</h3>
+                    <p class="text-slate-600 leading-relaxed">High-speed photocopies, vibrant color printing, and document scanning. We handle everything from single pages to full project reports.</p>
+                </div>
+
+                <!-- Service 2: Online Form Filling -->
+                <div class="bg-slate-50 p-8 rounded-2xl shadow-sm hover:shadow-xl transition border-t-4 border-brand-orange group">
+                    <!-- CHANGED BELOW: used bg-[#f97316] instead of bg-brand-orange for group-hover -->
+                    <div class="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mb-6 text-brand-orange group-hover:bg-[#f97316] group-hover:text-white transition">
+                        <i class="fa-solid fa-laptop text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-slate-800">Online Form Filling</h3>
+                    <p class="text-slate-600 leading-relaxed">Don't risk errors. Let us help you fill out online applications for competitive exams, college admissions, and government jobs accurately.</p>
+                </div>
+
+                <!-- Service 3: Document Finishing -->
+                <div class="bg-slate-50 p-8 rounded-2xl shadow-sm hover:shadow-xl transition border-t-4 border-brand-blue group">
+                    <!-- CHANGED BELOW: used bg-[#1e40af] instead of bg-brand-blue for group-hover -->
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6 text-brand-blue group-hover:bg-[#1e40af] group-hover:text-white transition">
+                        <i class="fa-solid fa-file text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-slate-800">Document Finishing</h3>
+                    <p class="text-slate-600 leading-relaxed">Professional lamination to protect your IDs and certificates, plus spiral binding for your practical files and assignment notebooks.</p>
+                </div>
+            </div>
+        </div>
+    </section>   
+
+    <!-- Products/Stationery Section -->
+    <section id="products" class="scroll-mt-16 py-20 bg-slate-50 relative">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center gap-16">
+                
+                <!-- Content -->
+                <div class="md:w-1/2">
+                    <span class="text-brand-blue font-bold tracking-wider text-sm uppercase mb-2 block">Stationery Shop</span>
+                    <h2 class="text-3xl font-bold text-slate-800 mb-6">Quality Education Accessories</h2>
+                    <p class="text-lg text-slate-600 mb-8 leading-relaxed">
+                        Running low on supplies? We stock a wide range of high-quality stationery to keep your studies uninterrupted. From daily essentials to specialized art supplies.
+                    </p>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-center bg-white p-4 rounded-lg shadow-sm">
+                            <i class="fa-solid fa-book text-brand-orange text-2xl mr-4"></i>
+                            <div>
+                                <h4 class="font-bold text-slate-800">Notebooks & Registers</h4>
+                                <p class="text-sm text-slate-500">Classmate, Nightingale & more.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center bg-white p-4 rounded-lg shadow-sm">
+                            <i class="fa-solid fa-pen-nib text-brand-blue text-2xl mr-4"></i>
+                            <div>
+                                <h4 class="font-bold text-slate-800">Writing Instruments</h4>
+                                <p class="text-sm text-slate-500">Branded pens, pencils & markers.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center bg-white p-4 rounded-lg shadow-sm">
+                            <i class="fa-solid fa-shapes text-green-500 text-2xl mr-4"></i>
+                            <div>
+                                <h4 class="font-bold text-slate-800">Project Supplies</h4>
+                                <p class="text-sm text-slate-500">Files, charts, glitter, & geometry boxes.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+				
+				<!-- Visual Grid -->
+                <div class="md:w-1/2 grid grid-cols-2 gap-4">
+                    <div class="bg-white p-6 rounded-2xl shadow-sm text-center border-b-4 border-yellow-400 mt-8">
+                        <i class="fa-solid fa-folder-open text-5xl text-yellow-400 mb-3 block"></i>
+                        <span class="font-bold text-slate-700">Files & Folders</span>
+                    </div>
+                    <div class="bg-white p-6 rounded-2xl shadow-sm text-center border-b-4 border-red-400 mt-8">
+                        <i class="fa-solid fa-palette text-5xl text-red-400 mb-3 block"></i>
+                        <span class="font-bold text-slate-700">Art Supplies</span>
+                    </div>
+                    <div class="bg-white p-6 rounded-2xl shadow-sm text-center border-b-4 border-blue-400 mt-8">
+                        <i class="fa-solid fa-pen-ruler text-5xl text-blue-400 mb-3 block"></i>
+                        <span class="font-bold text-slate-700">Office Tools</span>
+                    </div>
+                    <div class="bg-white p-6 rounded-2xl shadow-sm text-center border-b-4 border-purple-400 mt-8">
+                        <i class="fa-solid fa-calculator text-5xl text-purple-400 mb-3 block"></i>
+                        <span class="font-bold text-slate-700">Calculators</span>
+                    </div>
+                    <div class="bg-white p-6 rounded-2xl shadow-sm text-center border-b-4 border-teal-400 mt-8">
+                        <i class="fa-solid fa-clipboard-check text-5xl text-teal-400 mb-3 block"></i>
+                        <span class="font-bold text-slate-700">Exam Essentials</span>
+                    </div>
+                    <div class="bg-white p-6 rounded-2xl shadow-sm text-center border-b-4 border-pink-400 mt-8">
+                        <i class="fa-solid fa-tape text-5xl text-pink-400 mb-3 block"></i>
+                        <span class="font-bold text-slate-700">Adhesives</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- About Section -->
+    <section id="about" class="scroll-mt-16 py-20 bg-brand-blue text-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold mb-8">About EduKit</h2>
+            <div class="max-w-3xl mx-auto bg-white/10 backdrop-blur-sm p-8 rounded-2xl border border-white/20">
+                <p class="text-lg leading-relaxed mb-6 text-blue-50">
+                    EduKit is your one-stop destination for all academic and digital service needs. We specialize in high-quality <strong>Xerox</strong>, <strong>printing services</strong> (Color & B/W), and expert assistance with <strong>online form filling</strong> for competitive exams, college admissions, and government jobs.
+                </p>
+                <p class="text-lg leading-relaxed text-blue-50">
+                    Beyond digital services, we are a fully stocked <strong>stationery shop</strong> offering a wide range of educational accessories. From notebooks, pens, and pencils to essential school and office supplies, we have everything to keep you prepared.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+   <section id="contact" class="scroll-mt-16 py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-slate-800">Visit Us Today</h2>
+                <p class="text-slate-600 mt-2">We are ready to help with your prints, forms, and supplies.</p>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
+                <div class="space-y-6">
+                    
+                    <div class="flex items-start bg-blue-50 p-6 rounded-xl border border-blue-100 hover:shadow-md transition">
+                        <div class="w-12 h-12 bg-brand-blue text-white rounded-full flex items-center justify-center flex-shrink-0">
+                            <i class="fa-solid fa-phone text-xl"></i>
+                        </div>
+                        <div class="ml-5">
+                            <h4 class="font-bold text-xl mb-1 text-slate-800">Contact Number</h4>
+                            <p class="text-slate-600 font-semibold text-lg">933 200 2455</p>
+                            <p class="text-sm text-slate-400 mt-1">Available during shop hours</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start bg-green-50 p-6 rounded-xl border border-green-100 hover:shadow-md transition">
+                        <div class="w-12 h-12 bg-green-500 text-white rounded-full flex items-center justify-center flex-shrink-0">
+                            <i class="fa-brands fa-whatsapp text-2xl"></i>
+                        </div>
+                        <div class="ml-5">
+                            <h4 class="font-bold text-xl mb-1 text-slate-800">WhatsApp Us</h4>
+                            <p class="text-slate-600">Send files for print directly via WhatsApp!</p>
+                            <a href="https://wa.me/919332002455" target="_blank" class="inline-block mt-3 text-sm font-bold text-green-600 hover:text-green-700 uppercase tracking-wide border-b-2 border-green-200 hover:border-green-600 pb-1 transition">
+                                Chat Now <i class="fa-solid fa-arrow-right ml-1"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start bg-red-50 p-6 rounded-xl border border-red-100 hover:shadow-md transition">
+                        <div class="w-12 h-12 bg-red-500 text-white rounded-full flex items-center justify-center flex-shrink-0">
+                            <i class="fa-solid fa-envelope text-xl"></i>
+                        </div>
+                        <div class="ml-5">
+                            <h4 class="font-bold text-xl mb-1 text-slate-800">Email Us</h4>
+                            <p class="text-slate-600">Send documents for print via email.</p>
+                            <a href="mailto:edukit.kgp@gmail.com" class="inline-block mt-3 text-sm font-bold text-red-600 hover:text-red-700 tracking-wide border-b-2 border-red-200 hover:border-red-600 pb-1 transition">
+                                edukit.kgp@gmail.com
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="h-full">
+                    <div class="bg-white p-2 rounded-2xl shadow-lg border border-slate-200 h-full min-h-[400px]">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d939.8762858456786!2d87.37512894866651!3d22.3201414204104!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a1d4592c28b7e71%3A0x4622f19bd10d4590!2sEduKit!5e0!3m2!1sen!2sin!4v1764963501035!5m2!1sen!2sin" class="w-full h-full rounded-xl" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 py-10 border-t border-slate-800">
+        <div class="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
+            
+            <!-- Logo Section -->
+            <div class="flex items-center">
+                <div class="bg-white p-2 rounded-lg">
+                    <img src="Edukit_Logo.webp" onerror="this.src='https://placehold.co/200x80?text=EduKit+Logo'" alt="Edukit Logo" class="h-8">
+                </div>
+                <div class="ml-3">
+                    <span class="block text-white font-bold tracking-wide">EduKit</span>
+                    <span class="text-xs text-slate-500">The Student's Convenience Store</span>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="text-sm text-center md:text-right">
+                <p>&copy; 2025 EduKit. All rights reserved.</p>
+                <p class="mt-1">Designed for success.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Fixed Floating WhatsApp Button (Bonus) -->
+    <!-- REPLACE THE NUMBER BELOW WITH YOUR ACTUAL WHATSAPP NUMBER -->
+    <a href="https://wa.me/919332002455" target="_blank" class="fixed bottom-6 right-6 z-50 bg-green-500 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg hover:bg-green-600 transition wa-float" title="Chat on WhatsApp">
+        <i class="fa-brands fa-whatsapp text-3xl"></i>
+    </a>
+
+    <script>
+        // Mobile Menu Toggle Logic
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
